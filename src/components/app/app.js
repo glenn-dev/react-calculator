@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./../home/home";
 import Calculator from "./../calculator/calculator";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
