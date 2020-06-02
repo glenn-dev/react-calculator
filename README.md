@@ -1,68 +1,99 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-calculator 
 
-## Available Scripts
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+  * [Schema](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-In the project directory, you can run:
 
-### `yarn start`
+## About the Project
+React-calculator is a classic, minimalist, simple but useful app. Developed as a React practice.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### :dart: Built With:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* [React 16.13.1](https://nodejs.org/en/)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### :pencil: Schema:
 
-### `yarn build`
+*building...*
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### :telescope: Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [NodeJs](https://nodejs.org/en/download/package-manager/#arch-linux)
+```sh
+$ sudo apt install nodejs
+```
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### :rocket: Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repo
+```sh
+SSH: $ git clone git@github.com:glenn-dev/react-calculator.git
+HTTPS: $ git clone https://github.com/glenn-dev/react-calculator.git
+```
+2. Navigate to root folder
+```sh
+$ cd root/folder/project/path
+```
+3. Install NPM packages
+```sh
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing
 
-## Learn More
+:octocat: Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:construction: This is an open source project that still in development phase :baby:.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:wrench: For major changes, please open an [issue](https://guides.github.com/features/issues/) first to discuss what you would like to change. Feel free to contribute any suggestion as well.
 
-### Code Splitting
+:electric_plug: Pull requests are welcome. 
+1. Fork the Project
+2. Create your Feature Branch (`$ git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`$ git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`$ git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## License
+:lock_with_ink_pen: [MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+:busts_in_silhouette: [LinkedIn](https://www.linkedin.com/in/glenn-marcano-b59b7414b/?locale=en_US)<br/>
+:email: glenn.marcano90@gmail.com
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Acknowledgements
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [Stack Overflow](https://stackoverflow.com/)
+* [GitHub](https://github.com/)
+  * [Open source license](https://choosealicense.com/)
+  * [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
+* [Free Software Foundation](https://www.fsf.org/)
+  * [GNU](https://www.gnu.org/)
+  * [Linux](https://www.linux.org/)
+  * [Ubuntu](https://ubuntu.com/)
+  * [Spotify for Linux](https://www.spotify.com/cl/download/linux/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+  * [Prettier](https://prettier.io/)
+  * [vscode-spotify](https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.vscode-spotify)
+* [NodeJs](https://nodejs.org/en/)
+  * [npm](https://www.npmjs.com/)
+* [React](https://reactjs.org/)
+* [Draw.io](https://www.draw.io/)
+* [Firebase](https://firebase.google.com/)
+* [23people](https://23people.io/):metal:
