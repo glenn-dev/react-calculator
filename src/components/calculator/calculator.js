@@ -17,74 +17,74 @@ const Calculator = () => {
             <div className="col-8 p-0">
               <div className="row m-0 m-0">
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>+</button>
+                  <button className="button">+</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>-</button>
+                  <button className="button">-</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>x</button>
+                  <button className="button">x</button>
                 </div>
               </div>
 
               <div className="row m-0">
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>7</button>
+                  <button className="button">7</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>8</button>
+                  <button className="button">8</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>9</button>
+                  <button className="button">9</button>
                 </div>      
               </div>
 
               <div className="row m-0">
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>4</button>
+                  <button className="button">4</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>5</button>
+                  <button className="button">5</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>6</button>
-                </div>
-              </div>
-
-              <div className="row m-0">
-                <div className="col-2 my-2 mx-3 p-0">
-                  <button>1</button>
-                </div>
-                <div className="col-2 my-2 mx-3 p-0">
-                  <button>2</button>
-                </div>
-                <div className="col-2 my-2 mx-3 p-0">
-                  <button>3</button>
+                  <button className="button">6</button>
                 </div>
               </div>
 
               <div className="row m-0">
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>0</button>
+                  <button className="button">1</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>.</button>
+                  <button className="button">2</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button>AC</button>
+                  <button className="button">3</button>
+                </div>
+              </div>
+
+              <div className="row m-0">
+                <div className="col-2 my-2 mx-3 p-0">
+                  <button className="button">0</button>
+                </div>
+                <div className="col-2 my-2 mx-3 p-0">
+                  <button className="button">.</button>
+                </div>
+                <div className="col-2 my-2 mx-3 p-0">
+                  <button className="button ac-button">AC</button>
                 </div>
               </div>
             </div>
 
             <div className="col-2 p-0">
               <div className="my-2 mx-3 p-0">
-                  <button>/</button>
+                  <button className="button">/</button>
               </div>
               <div className="my-3 my-2 mx-3 p-0">
-                <button className="button equal">=</button>
+                <button className="button equal-button">=</button>
               </div>
             </div>
-            
+
           </div>
         </div>
       </Row>

@@ -4,19 +4,26 @@
   border-width: 10px;
   border-color: rgb(104, 104, 104);
   border-radius: 3px;
+  font-size: 1.5rem;
 }
 .input {
   height: 4rem;
   direction: rtl;
 }
 
-button {
+.button {
   width: 3rem;
   height: 3rem;
   border-width: 1px;
   border-radius: 4px;
   cursor: pointer;
 }
-.equal {
+.equal-button {
   height: 15rem;
+  background-color: rgba(78, 141, 199);
+  color: white;
+}
+.ac-button {
+  background-color: rgba(212, 103, 103);
+  color: white;
 }
