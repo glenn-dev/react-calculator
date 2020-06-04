@@ -8,53 +8,59 @@ const Calculator = () => {
   const [flag, setFlag] = useState(false);
 
   /* CONST */
-  const operators = '/*-+';
-
+  const operators = ['/*-+.', '/*+'];
+  
   /* FUNCTIONS */
-
+  const throwAlert = () => alert('Please enter a valid operator.');
   /* Set new element into input value */
   const setValue = (elem) => {
     let newValue = inputValue + elem;
     setInputValue(newValue);
-  }
+  };
 
-  /* Evaluate input element */
+  /* Evaluate and set input elements */
   const inputElement = (elem) => {
-    if (flag && operators.includes(elem)) {
-      setValue(elem);
-      setFlag(false)
+    if (inputValue.length > 18) {
+      alert(`The value is too large, but here's the result so far: ${eval(inputValue)}`);
+      clearInput();
+    } else if (inputValue === '') {
+      !operators[1].includes(elem) ? setInputValue(elem) : throwAlert();
     } else if (flag) {
-      setInputValue(elem);
-      console.log(inputValue);
-      setFlag(false)
+      setValue(elem);
+      setFlag(false);
     } else {
-      if (operators.includes(elem)) {
-        if (!operators.includes(inputValue.substr(-1))) {
-          setValue(elem);
-        }
-      } else {
-        setValue(elem);
-      }
+      (!operators[0].includes(inputValue.substr(-1)) || !isNaN(elem)) ? setValue(elem) : throwAlert();
     }
   };
 
-/*   switch (elem){
-    case flag:
-      operators.includes(elem) ? setValue(elem) : setInputValue(elem);
-  } */
-
-  const inputOnChange = (elem) => {
-    console.log(elem.target.value);
-    // let newValue = inputValue + elem;
-    // setInputValue(newValue);
+  /* Evaluate keyboard input elements */
+  const keyDown = (key) => {
+    const keyValue = key.key;
+    const keyCode = key.keyCode;
+    if (keyCode === 13) {
+      resolveInput(inputValue);
+    } else if (keyCode === 8) {
+      const newValue = inputValue.slice(0, -1);
+      setInputValue(newValue);
+    } else if (keyCode === 46) {
+      clearInput();
+    } else {
+      (!isNaN(keyValue) || operators[0].includes(keyValue)) ? inputElement(keyValue) : throwAlert();
+    }
   };
 
+  /* Check if input content is a valid math expression and resolve it. */
   const resolveInput = (inputValue) => {
-    console.log(`resolving: ${inputValue}`);
-    setInputValue(eval(inputValue));
-    setFlag(true)
+    if (!operators[0].includes(inputValue.substr(-1))) {
+      const result = eval(inputValue);
+      setInputValue(Number(result).toLocaleString());
+      setFlag(true);
+    } else {
+      throwAlert();
+    }
   };
 
+  /* Clear input value */
   const clearInput = () => {
     setInputValue('');
   };
@@ -64,13 +70,13 @@ const Calculator = () => {
     <Container className="mt-5">
       <Row>
         <div className="calculator text-center">
-
           <div className="row m-0 w-100">
             <input 
               className="mb-2 w-100 d-block bg-dark text-white input" 
               type="text" 
               placeholder={'0'}
-              onChange={(e) => inputOnChange(e)}
+              onKeyDown={(e) => keyDown(e)}
+              onChange={() => console.log(inputValue)}
               value={inputValue}>
             </input>
           </div>
