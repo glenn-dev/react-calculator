@@ -8,7 +8,7 @@
 }
 .input {
   height: 4rem;
-  direction: rtl;
+  text-align: right; 
 }
 
 .button {
