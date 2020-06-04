@@ -3,42 +3,74 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
 const Calculator = () => {
-  
+  /* HOOKS */
   const [inputValue, setInputValue] = useState('');
-  const [operator, setOperatorValue] = useState(null);
-  
-  const inputElement = (elem) => {
+  const [flag, setFlag] = useState(false);
+
+  /* CONST */
+  const operators = '/*-+';
+
+  /* FUNCTIONS */
+
+  /* Set new element into input value */
+  const setValue = (elem) => {
     let newValue = inputValue + elem;
     setInputValue(newValue);
-    return inputValue;
+  }
+
+  /* Evaluate input element */
+  const inputElement = (elem) => {
+    if (flag && operators.includes(elem)) {
+      setValue(elem);
+      setFlag(false)
+    } else if (flag) {
+      setInputValue(elem);
+      console.log(inputValue);
+      setFlag(false)
+    } else {
+      if (operators.includes(elem)) {
+        if (!operators.includes(inputValue.substr(-1))) {
+          setValue(elem);
+        }
+      } else {
+        setValue(elem);
+      }
+    }
   };
 
-  const resolveInput = (inputValue, operator) => {
+/*   switch (elem){
+    case flag:
+      operators.includes(elem) ? setValue(elem) : setInputValue(elem);
+  } */
+
+  const inputOnChange = (elem) => {
+    console.log(elem.target.value);
+    // let newValue = inputValue + elem;
+    // setInputValue(newValue);
+  };
+
+  const resolveInput = (inputValue) => {
     console.log(`resolving: ${inputValue}`);
-    operator != undefined ? setInputValue(`${eval(inputValue)} ${operator}`) : setInputValue(eval(inputValue));
-    setOperatorValue(null);
+    setInputValue(eval(inputValue));
+    setFlag(true)
   };
 
   const clearInput = () => {
     setInputValue('');
-    setOperatorValue(null);
   };
 
-  const operatorElement = (elem) => {
-    inputElement(elem);
-    operator != null ? resolveInput(inputValue, elem) : setOperatorValue(elem);
-  };
-
+  /* MAGIC */
   return (
     <Container className="mt-5">
       <Row>
         <div className="calculator text-center">
 
-          <div className=" row m-0 w-100">
+          <div className="row m-0 w-100">
             <input 
               className="mb-2 w-100 d-block bg-dark text-white input" 
               type="text" 
               placeholder={'0'}
+              onChange={(e) => inputOnChange(e)}
               value={inputValue}>
             </input>
           </div>
@@ -48,13 +80,13 @@ const Calculator = () => {
             <div className="col-8 p-0">
               <div className="row m-0 m-0">
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button className="button" onClick={() => operatorElement('+')}>+</button>
+                  <button className="button" onClick={() => inputElement('+')}>+</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button className="button" onClick={() => operatorElement('-')}>-</button>
+                  <button className="button" onClick={() => inputElement('-')}>-</button>
                 </div>
                 <div className="col-2 my-2 mx-3 p-0">
-                  <button className="button" onClick={() => operatorElement('*')}>x</button>
+                  <button className="button" onClick={() => inputElement('*')}>x</button>
                 </div>
               </div>
 
@@ -109,7 +141,7 @@ const Calculator = () => {
 
             <div className="col-2 p-0">
               <div className="my-2 mx-3 p-0">
-                  <button className="button" onClick={() => operatorElement('/')}>/</button>
+                  <button className="button" onClick={() => inputElement('/')}>/</button>
               </div>
               <div className="my-3 my-2 mx-3 p-0">
                 <button className="button equal-button" onClick={() => resolveInput(inputValue)}>=</button>
