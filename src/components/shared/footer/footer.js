@@ -13,7 +13,7 @@ const Footer = () => {
             />
           </div>
           <div className="col-sm-6 text-center">
-            <a href="https://github.com/glenn-dev" target="_blank">
+            <a href="https://github.com/glenn-dev/react-calculator" target="_blank">
               <i className="mx-3 fab fa-github-square text-white fa-2x"></i>
             </a>
             <a
