@@ -1,8 +1,7 @@
-# React-calculator 
+# [React-calculator](https://react-calculator-8980d.web.app/)
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-  * [Schema](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -19,10 +18,8 @@ React-calculator is a classic, minimalist, simple but useful app. Developed as a
 
 * [React 16.13.1](https://nodejs.org/en/)
 
+* [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
-### :pencil: Schema:
-
-*building...*
 
 ## Getting Started
 
