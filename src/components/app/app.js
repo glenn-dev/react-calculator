@@ -1,15 +1,17 @@
-import React from "react";
+import React from 'react';
 import Calculator from './../calculator/calculator';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
+    <Container>
+      <Row className='mt-5'>
+        <div className='col-12'>
           <Calculator />
         </div>
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
 

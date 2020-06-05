@@ -80,14 +80,14 @@ $ npm start
 ## Acknowledgements
 
 * [Stack Overflow](https://stackoverflow.com/)
-* [GitHub](https://github.com/)
-  * [Open source license](https://choosealicense.com/)
-  * [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
 * [Free Software Foundation](https://www.fsf.org/)
   * [GNU](https://www.gnu.org/)
   * [Linux](https://www.linux.org/)
   * [Ubuntu](https://ubuntu.com/)
   * [Spotify for Linux](https://www.spotify.com/cl/download/linux/)
+* [GitHub](https://github.com/)
+  * [Open source license](https://choosealicense.com/)
+  * [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
 * [Visual Studio Code](https://code.visualstudio.com/)
   * [Prettier](https://prettier.io/)
   * [vscode-spotify](https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.vscode-spotify)

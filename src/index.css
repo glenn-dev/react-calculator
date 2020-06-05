@@ -1,8 +1,7 @@
 .calculator {
-  width: 18rem;
-  background-color: rgb(226, 226, 226);
-  border-width: 10px;
-  border-color: rgb(104, 104, 104);
+  width: 300px;
+  background-color: rgb(255, 253, 253);
+  border: 1px solid rgba(124, 124, 124, 0.767);
   border-radius: 3px;
   font-size: 1.5rem;
 }
@@ -12,9 +11,9 @@
 }
 
 .button {
-  width: 3rem;
+  width: 3.4rem;
   height: 3rem;
-  border-width: 1px;
+  border: 1px solid #b7b4b4;
   border-radius: 4px;
   cursor: pointer;
 }
