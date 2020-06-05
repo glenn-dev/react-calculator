@@ -87,38 +87,118 @@ const Calculator = (props) => {
       <Row className="m-0">
         <div className="col-9 pr-1">
           <Row>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="+" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="-" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="*" onClick={(e) => inputElement(e)}></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="+"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="-"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="*"
+              onClick={(e) => inputElement(e)}
+            ></Button>
           </Row>
 
           <Row>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="7" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="8" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="9" onClick={(e) => inputElement(e)}></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="7"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="8"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="9"
+              onClick={(e) => inputElement(e)}
+            ></Button>
           </Row>
 
           <Row>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="4" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="5" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="6" onClick={(e) => inputElement(e)}></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="4"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="5"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="6"
+              onClick={(e) => inputElement(e)}
+            ></Button>
           </Row>
 
           <Row>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="1" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="2" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="3" onClick={(e) => inputElement(e)}></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="1"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="2"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="3"
+              onClick={(e) => inputElement(e)}
+            ></Button>
           </Row>
 
           <Row>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="0" onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button" buttonValue="." onClick={(e) => inputElement(e)}></Button>
-            <Button divClass="col-2 my-2 mx-3 p-0" buttonClass="button ac-button" buttonValue="AC" onClick={(inputValue) => clearInput(inputValue)}></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="0"
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button"
+              buttonValue="."
+              onClick={(e) => inputElement(e)}
+            ></Button>
+            <Button
+              divClass="col-2 my-2 mx-3 p-0"
+              buttonClass="button ac-button"
+              buttonValue="AC"
+              onClick={(inputValue) => clearInput(inputValue)}
+            ></Button>
           </Row>
         </div>
 
         <div className="col-3 pl-2">
-          <Button divClass="my-2" buttonClass="button" buttonValue="/" onClick={(e) => inputElement(e)}></Button>
+          <Button
+            divClass="my-2"
+            buttonClass="button"
+            buttonValue="/"
+            onClick={(e) => inputElement(e)}
+          ></Button>
           <div className="my-3">
             <button
               className="button equal-button"
