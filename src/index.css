@@ -39,3 +39,7 @@
 .ac-button:hover {
   background: rgb(202, 94, 94);
 }
+
+.logo {
+  width: 10rem;
+}
