@@ -13,16 +13,29 @@
 .button {
   width: 3.4rem;
   height: 3rem;
-  border: 1px solid #b7b4b4;
+  border: 1px solid #c7c5c5;
   border-radius: 4px;
-  cursor: pointer;
 }
+
+.button:hover {
+  background: rgb(204, 204, 204);
+}
+
 .equal-button {
   height: 15rem;
   background-color: rgba(78, 141, 199);
   color: white;
 }
+
+.equal-button:hover {
+  background: rgb(72, 133, 190);
+}
+
 .ac-button {
   background-color: rgba(212, 103, 103);
   color: white;
+}
+
+.ac-button:hover {
+  background: rgb(202, 94, 94);
 }

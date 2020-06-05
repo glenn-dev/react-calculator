@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Button from "./../button/button";
 
-const Calculator = () => {
+const Calculator = (props) => {
   /* HOOKS */
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(props.initialValue);
   const [flag, setFlag] = useState(false);
 
   /* CONST */
@@ -10,6 +11,7 @@ const Calculator = () => {
 
   /* FUNCTIONS */
   const throwAlert = () => alert("Please enter a valid operator.");
+
   /* Set new element into input value */
   const setValue = (elem) => {
     let newValue = inputValue + elem;
@@ -19,13 +21,9 @@ const Calculator = () => {
   /* Evaluate and set input elements */
   const inputElement = (elem) => {
     if (inputValue.length > 18) {
-      alert(
-        `The value is too large, but here's the result so far: ${eval(
-          inputValue
-        )}`
-      );
+      alert("The value is too large.");
       clearInput();
-    } else if (inputValue === "") {
+    } else if (inputValue === "" || inputValue === "0") {
       !operators[1].includes(elem) ? setInputValue(elem) : throwAlert();
     } else if (flag) {
       setValue(elem);
@@ -57,6 +55,7 @@ const Calculator = () => {
 
   /* Check if input content is a valid math expression and resolve it. */
   const resolveInput = (inputValue) => {
+    console.log(inputValue);
     if (!operators[0].includes(inputValue.substr(-1))) {
       const result = eval(inputValue);
       setInputValue(Number(result).toLocaleString());
@@ -89,86 +88,60 @@ const Calculator = () => {
         <div className="col-9 pr-1">
           <div className="row">
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("+")}>
-                +
-              </button>
+              <Button buttonValue="+" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("-")}>
-                -
-              </button>
+              <Button buttonValue="-" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("*")}>
+              <Button buttonValue="*" onClick={(e) => inputElement(e)}>
                 x
-              </button>
+              </Button>
             </div>
           </div>
 
           <div className="row">
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("7")}>
-                7
-              </button>
+              <Button buttonValue="7" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("8")}>
-                8
-              </button>
+              <Button buttonValue="8" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("9")}>
-                9
-              </button>
+              <Button buttonValue="9" onClick={(e) => inputElement(e)}></Button>
             </div>
           </div>
 
           <div className="row">
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("4")}>
-                4
-              </button>
+              <Button buttonValue="4" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("5")}>
-                5
-              </button>
+              <Button buttonValue="5" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("6")}>
-                6
-              </button>
+              <Button buttonValue="6" onClick={(e) => inputElement(e)}></Button>
             </div>
           </div>
 
           <div className="row">
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("1")}>
-                1
-              </button>
+              <Button buttonValue="1" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("2")}>
-                2
-              </button>
+              <Button buttonValue="2" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("3")}>
-                3
-              </button>
+              <Button buttonValue="3" onClick={(e) => inputElement(e)}></Button>
             </div>
           </div>
 
           <div className="row">
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement("0")}>
-                0
-              </button>
+              <Button buttonValue="0" onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
-              <button className="button" onClick={() => inputElement(".")}>
-                .
-              </button>
+              <Button buttonValue="." onClick={(e) => inputElement(e)}></Button>
             </div>
             <div className="col-2 my-2 mx-3 p-0">
               <button
@@ -183,9 +156,7 @@ const Calculator = () => {
 
         <div className="col-3 pl-2">
           <div className="my-2">
-            <button className="button" onClick={() => inputElement("/")}>
-              /
-            </button>
+            <Button buttonValue="/" onClick={(e) => inputElement(e)}></Button>
           </div>
           <div className="my-3">
             <button
