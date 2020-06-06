@@ -44,6 +44,10 @@ $ cd root/folder/project/path
 ```
 3. Install NPM packages
 ```sh
+$ npm install
+```
+3. Run app in local server 
+```sh
 $ npm start
 ```
 
@@ -91,6 +95,6 @@ $ npm start
 * [NodeJs](https://nodejs.org/en/)
   * [npm](https://www.npmjs.com/)
 * [React](https://reactjs.org/)
-* [Draw.io](https://www.draw.io/)
+* [Font Awesome](https://fontawesome.com/icons?d=gallery)
 * [Firebase](https://firebase.google.com/)
 * [23people](https://23people.io/):metal:
