@@ -46,7 +46,7 @@ $ cd root/folder/project/path
 ```sh
 $ npm install
 ```
-3. Run app in local server 
+4. Run app in local server 
 ```sh
 $ npm start
 ```
